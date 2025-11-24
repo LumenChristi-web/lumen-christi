@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumem-Christi</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/lc-favicon.png">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+              colors: {
+                green: "#00A991",
+                veryLightGreen: "#ECFDF3",
+                shadowGreen: "#D9F2EF",
+                lightGreen: "#027A48",
+                darkGreen: "#003B33",
+                beige:"#FAF6ED",
+                brown: "#E3DAC5",
+                cream: "#FAF8F2",
+                gray: "#667085",
+                veryDarkBlue: "#1D2939",
+              }, 
+              fontFamily: {
+                Inter: ['Inter', 'sans-serif'],
+                RachelBrown: ['RachelBrown', 'sans-serif']
+              },  
+            },
+        },
+      }
+    </script>
+</head>
+<body class="fon-Inter">
+  <!-- Header -->
+  <div id="header"></div>
+  
+  <!-- Main section -->
+  <main class="xl:mx-20 lg:mx-16 mx-10 mb-20 pt-[70px] md:pt-0">
+    <div class="grid justify-items-center lg:mt-24 mt-16 mb-20">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• Location</span>
+      <h3 class="mt-6 mb-10 xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-normal xl:w-[70%] md:w-[80%] w-full text-center font-RachelBrown">
+        Lumen Christi of Virginia is part of a broader network of care facilities dedicated to serving individuals in need.
+      </h3>
+
+      <!-- Sign Up for a Tour -->
+        <a href="./contact-us.html">
+          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-10 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
+">
+            Sign Up for a Tour
+          </button>
+        </a>
+    </div>
+
+    <!-- Assisted Living Cards  -->
+    <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-x-8 md:gap-x-5 mb-28">
+      <!-- Lumen Christi of Arizona Assisted Living -->
+      <div class="mb-10 md:mb-0">
+        <img src="./assets/images/lc-location-img1.png" alt="location-img1" class="w-full">
+        <!-- Card -->
+        <div class="p-6 rounded-b shadow-md xl:h-[50%] lg:h-[57%] h-[60%]">
+          <h4 class="xl:text-4xl lg:text-2xl md:text-lg text-base lg:mt-5 mt-3 lg:mb-7 mb-5 xl:w-[70%] w-full font-RachelBrown">
+            Lumen Christi of Arizona Assisted Living
+          </h4>
+          <p class="text-gray xl:text-xl lg:text-lg md:text-base text-sm font-medium xl:w-[82%] w-full xl:mb-2 mb-1">
+            We are excited to expand our services with Providence Home, 
+            which will offer the same high level of care in a new and welcoming location. Stay tuned for more details!
+          </p>
+          <p class="text-black lxl:text-xl lg:text-lg md:text-base text-sm font-medium">
+            (Phoenix, Arizona. Coming Soon!)
+          </p>
+        </div>
+      </div>
+
+       <!-- El Pueblo Assisted Living Facility(Fountain Hills, Arizona) -->
+      <div>
+        <img src="./assets/images/lc-location-img2.png" alt="location-img2" class="w-full">
+         <!-- Card -->
+        <div class="p-6 rounded-b shadow-md xl:h-[50%] lg:h-[57%] h-[60%]">
+          <h4 class="xl:text-4xl lg:text-2xl md:text-lg text-base lg:mt-5 mt-3 lg:mb-7 mb-5 xl:w-[90%] w-full font-RachelBrown">
+            El Pueblo Assisted Living Facility(Fountain Hills, Arizona)
+          </h4>
+          <p class="text-gray xl:text-xl lg:text-lg md:text-base text-sm font-medium xl:w-[80%] w-full mb-2">
+            Our Virginia Beach Home provides a warm and structured environment where residents receive individualized 
+            care while engaging in daily activities that promote socialization, personal growth, and community involvement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- States We Serve -->
+   <section class="xl:px-20 lg:px-16 px-10 pb-24 bg-cream">
+    <div class="grid justify-items-center lg:pt-32 pt-24">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• Location</span>
+      <h2 class="mt-4 lg:mb-12 mb-8 xl:text-5xl md:text-4xl text-3xl font-RachelBrown">States We Serve</h2>
+    </div>
+     
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-x-16 md:gap-x-10">
+      <!-- Arizona img -->
+      <a href="https://www.google.com/maps?q=2436+W+Tonto+St,+Phoenix,+AZ+85009" target="_blank" class="hover:underline">
+        <div class="mb-20 md:mb-0">
+          <img src="./assets/images/lc-location-img3.png" alt="Arizona-img" class="w-full lg:mb-8 mb-6">
+          <div class="grid justify-items-center text-center">
+            <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
+              Arizona
+            </h4>
+            <p class="text-black text-base font-normal">
+              123 Sample St, phoeoix NSW 2000 AU
+            </p>
+          </div>
+      </div>
+      </a>
+
+       <!-- Virginia img -->
+      <a href="https://www.google.com/maps?q=177+South+Plaza+Trail,+Virginia+Beach,+VA+23452" target="_blank" class="hover:underline">
+        <div>
+          <img src="./assets/images/lc-location-img4.png" alt="Virginia-img" class="w-full lg:mb-8 mb-6">
+          <div class="grid justify-items-center text-center">
+            <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
+              Virginia
+            </h4>
+            <p class="text-black text-base font-normal">
+              123 Sample St, New York NY 10000 USA
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+   </section>
+
+   <!-- We’d love to hear from you -->
+   <section class="grid justify-items-center mt-24 relative">
+    <div class="grid justify-items-center">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+        • Location
+      </span>
+      <h1 class="lg:text-5xl md:text-4xl text-2xl mt-3 text-black text-center font-normal font-RachelBrown">
+        We'd love to hear from you
+      </h1>
+      <p class="text-gray md:text-xl text-base text-center font-normal lg:mt-6 md:mt-3">
+        We have home all around the states.
+      </p>
+    </div>
+
+    <!-- Map -->
+    <div class="relative">
+      <!-- Background Map -->
+      <img src="./assets/images/lc-US-Map.png" alt="USA Map" class="w-full my-12">
+
+      <!-- Arizona Marker -->
+      <a href="https://www.google.com/maps?q=2436+W+Tonto+St,+Phoenix,+AZ+85009" target="_blank" class="absolute block" style="top: 60%; left: 18%;">
+        <img src="./assets/images/lc-Arizona-US.png" alt="Arizona Location" class="hover:scale-110 transition-transform duration-300">
+      </a>
+
+      <!-- Virginia Marker -->
+      <a href="https://www.google.com/maps?q=177+South+Plaza+Trail,+Virginia+Beach,+VA+23452" target="_blank" class="absolute block" style="top: 43%; left: 75%;">
+        <img src="./assets/images/lc-Virginia-US.png" alt="Virginia Location" class="hover:scale-110 transition-transform duration-300">
+      </a>
+    </div>
+   </section>
+
+    <!-- Call to Action -->
+    <section class="xl:m-20 lg:m-16 m-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="xl:text-4xl lg:text-3xl text-2xl font-normal text-gray text-center md:text-left md:w-[60%] font-RachelBrown">
+            <span class="text-veryDarkBlue font-semibold">Have questions? Interested in scheduling a tour?</span>
+            Contact us today to learn more about our homes and services.
+        </p>
+
+        <!-- Sign Up for a Tour -->
+        <a href="./contact-us.html">
+            <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mt-6 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
+">
+            Sign Up for a Tour
+            </button>
+        </a>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+
+  <script src="./main.js"></script>   
+</body>
+</html>

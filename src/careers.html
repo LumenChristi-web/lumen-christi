@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumem-Christi</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/lc-favicon.png">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+              colors: {
+                green: "#00A991",
+                veryLightGreen: "#ECFDF3",
+                shadowGreen: "#D9F2EF",
+                lightGreen: "#027A48",
+                darkGreen: "#003B33",
+                beige:"#FAF6ED",
+                brown: "#E3DAC5",
+                cream: "#FAF8F2",
+                gray: "#667085",
+                veryDarkBlue: "#1D2939",
+              }, 
+              fontFamily: {
+                Inter: ['Inter', 'sans-serif'],
+                RachelBrown: ['RachelBrown', 'sans-serif']
+              },  
+            },
+        },
+      }
+    </script>
+</head>
+<body class="fon-Inter">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Main section -->
+  <main class="relative bg-cover bg-center" style="background-image: url('./assets/images/lc-location-banner.png');">
+    <div class="xl:px-20 lg:px-16 px-10 pt-[70px] md:pt-0">
+      <div class="grid md:grid-cols-2 grid-cols-1 xl:gap-x-12 lg:gap-10 gap-x-8">
+        <div class="xl:mt-60 lg:mt-48 md:mt-36 mt-16">
+          <div class="grid justify-items-center md:justify-items-start">
+            <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+              • Career
+            </span>
+            <h1 class="xl:text-5xl lg:text-3xl text-2xl l:mt-6 mt-4 font-normal text-veryDarkBlue font-RachelBrown">
+              Employment Opportunities
+            </h1>
+            <p class="xl:mt-6 mt-4 text-black text-base text-center md:text-start font-normal">
+              We are looking for compassionate staff members to join our team. 
+              If you have interest in working at our home, please complete the application below.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col md:flex-row xl:space-x-9 lg:space-x-5 md:space-x-3 mt-8 items-center justify-center md:items-start md:justify-start">
+            <!-- Download Application -->
+            <a href="./assets/docs/Lumen Christi Application.pdf" download>
+              <button class="bg-green text-white  xl:text-xl ld:text-base text-sm font-medium rounded-full xl:px-10 lg:px-6 md:px-4 px-[75px] lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mb-5 md:mb-0 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
+  ">
+                Download Application
+              </button>
+            </a>
+
+            <!-- Contact Us -->
+            <a href="./contact-us.html">
+              <button class="border border-green text-green xl:text-xl lg:text-base text-sm font-medium xl:px-20 lg:px-12 md:px-9 px-28 lg:py-3 py-2 rounded-full transition-all duration-300 ease-in-out hover:border-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:border-[#00947E] active:rounded-lg active:scale-95
+  ">
+                  Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Career-img -->
+        <div class="my-20">
+          <img src="./assets/images/lc-careers-img.png" alt="Career-img" class="w-full">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Career Badge -->
+  <section class="xl:px-20 lg:px-16 px-10 pt-20 bg-[#F9FAFB]">
+    <div class="grid justify-items-center text-center">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+        • Career
+      </span>
+
+      <!-- Section Title -->
+      <h2 class="xl:text-5xl md:text-4xl text-2xl text-veryDarkBlue mt-6 font-normal font-RachelBrown">Job Vacancies</h2>
+      <p class="text-gray-500 max-w-xl mx-auto xl:mt-8 lg:mt-6 mt-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </div>
+
+    <!-- Job Grid -->
+    <div id="jobGrid" class="grid md:grid-cols-2 md:gap-x-16 lg:py-20 md:py-12 py-10">
+      <!-- Job Card Template (Cloned via JS) -->
+    </div>
+  </section>
+
+   <!-- Pagination -->
+  <div class="flex justify-center items-center mb-16 mt-10">
+    <div
+      class="inline-flex flex-wrap justify-center items-center border-2 border-[#D5D7DA] rounded-lg overflow-hidden max-w-full">
+      
+      <button id="prevPage"
+        class="flex items-center px-4 py-[10px] border-[1px] border-[#D5D7DA] font-semibold text-sm text-black hover:text-green hover:border-green">
+        ← Previous
+      </button>
+
+      <div id="pageNumbers"
+        class="flex flex-wrap items-center justify-center text-sm sm:text-base"></div>
+
+      <button id="nextPage"
+        class="flex items-center px-4 py-[10px] border-[1px] border-[#D5D7DA] font-semibold text-sm text-black hover:text-green hover:border-green">
+        Next →
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Call to Action -->
+  <section class="xl:m-20 lg:m-16 m-10">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="xl:text-4xl lg:text-3xl text-2xl font-normal text-gray text-center md:text-left md:w-[60%] font-RachelBrown">
+          <span class="text-veryDarkBlue font-semibold">Have questions? Interested in scheduling a tour?</span>
+          Contact us today to learn more about our homes and services.
+      </p>
+
+      <!-- Sign Up for a Tour -->
+      <a href="./contact-us.html">
+          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mt-6 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
+">
+           Sign Up for a Tour
+          </button>
+      </a>
+    </div>
+    </section>
+  
+  <!-- Footer -->
+  <div id="footer"></div>
+  
+  <script>
+    const jobs = [
+    { title: "Direct Support Professional", desc: "We’re seeking dedicated Direct Support Professionals who are passionate about providing exceptional care and making a difference in people’s lives. If this sounds like you, please complete our application form and get in touch with us." },
+    // { title: "Program Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Health Giver", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Operations Lead", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Front Desk Assistant", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Marketing Executive", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "IT Support", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Finance Analyst", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "HR Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Sales Executive", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Logistics Coordinator", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Customer Success Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Graphic Designer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Web Developer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Content Writer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Digital Marketer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Admin Assistant", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Procurement Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Warehouse Clerk", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Field Supervisor", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Software Engineer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "UI/UX Designer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Legal Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Business Analyst", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Operations Analyst", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Accountant", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Junior Developer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Executive Assistant", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Customer Care Rep", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Product Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Finance Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Media Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Social Media Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Public Relations Lead", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Recruitment Specialist", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Customer Support Lead", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Training Coordinator", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Office Clerk", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Operations Intern", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Human Resource Intern", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Field Marketer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Dispatch Rider", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Quality Control Analyst", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Project Coordinator", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Brand Strategist", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Copywriter", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Research Officer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Customer Experience Lead", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Security Personnel", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Maintenance Technician", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Driver", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Cleaner", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Receptionist", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Event Planner", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Procurement Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Sales Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Customer Operations Rep", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Internal Auditor", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    // { title: "Product Designer", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  ];
+
+
+    const jobsPerPage = 6;
+    let currentPage = 1;
+
+    function renderJobs() {
+      const jobGrid = document.getElementById('jobGrid');
+      jobGrid.innerHTML = '';
+
+      const start = (currentPage - 1) * jobsPerPage;
+      const paginatedJobs = jobs.slice(start, start + jobsPerPage);
+
+      paginatedJobs.forEach(job => {
+        const card = document.createElement('div');
+        card.className = "border-b border-gray-300 py-6";
+        card.innerHTML = `
+          <h5 class="text-2xl font-semibold mb-3 text-black font-RachelBrown">${job.title}</h5>
+          <p class="text-gray-700 mb-4">${job.desc}</p>
+          <a href="./assets/docs/Lumen Christi Application.pdf" download>
+            <button class="bg-[#00A991] text-white text-base font-medium px-6 py-2 rounded-full hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:border-[#00947E] active:rounded-lg active:scale-95 transition-all duration-300 ease-in-out">
+              Apply Now
+            </button>
+          </a>
+        `;
+        jobGrid.appendChild(card);
+      });
+    }
+
+    function renderPagination() {
+      const totalPages = Math.ceil(jobs.length / jobsPerPage);
+      const pageNumbers = document.getElementById('pageNumbers');
+      pageNumbers.innerHTML = '';
+
+      const paginationItems = [];
+
+      // Always show first 3 pages, last 3, and current ±1
+      for (let i = 1; i <= totalPages; i++) {
+        if (
+          i <= 3 || 
+          i > totalPages - 3 || 
+          Math.abs(i - currentPage) <= 1
+        ) {
+          paginationItems.push(i);
+        } else if (
+          paginationItems[paginationItems.length - 1] !== '...'
+        ) {
+          paginationItems.push('...');
+        }
+      }
+
+      paginationItems.forEach(num => {
+        const btn = document.createElement('button');
+        btn.className = `
+          px-4 py-[10px] border-[1px] border-[#D5D7DA] hover:border-green text-sm
+          ${num === currentPage
+            ? 'text-black hover:text-green'
+            : 'text-black hover:text-green'}
+        `;
+
+        btn.textContent = num;
+
+        if (num !== '...') {
+          btn.addEventListener('click', () => {
+            currentPage = num;
+            renderJobs();
+            renderPagination();
+          });
+        } else {
+          btn.disabled = true;
+        }
+
+        pageNumbers.appendChild(btn);
+      });
+
+      document.getElementById('prevPage').disabled = currentPage === 1;
+      document.getElementById('nextPage').disabled = currentPage === totalPages;
+
+      document.getElementById('prevPage').classList.toggle('opacity50', currentPage === 1);
+      document.getElementById('nextPage').classList.toggle('opacity50', currentPage === totalPages);
+    }
+
+    document.getElementById('prevPage').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderJobs();
+        renderPagination();
+      }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', () => {
+      const totalPages = Math.ceil(jobs.length / jobsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderJobs();
+        renderPagination();
+      }
+    });
+
+    // Initial load
+    renderJobs();
+    renderPagination();
+  </script>
+
+  <script src="./main.js"></script>  
+</body>
+</html>
