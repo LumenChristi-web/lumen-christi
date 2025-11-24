@@ -1,9 +1,0 @@
-@import "tailwindcss";
-
-@font-face {
-  font-family: "RachelBrown";
-  src: url("../src/assets/fonts/RachelBrown.otf") format("opentype"),
-       url("../src/assets/fonts/RachelBrown.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
