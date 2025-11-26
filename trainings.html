@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumem-Christi</title>
+
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/lc-favicon.png">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.12/build/css/intlTelInput.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- EmailJS Setup -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "PX-1eDQHedA5-5RgX",
+            });
+        })();
+    </script>
+
+    <!-- Tailwind Custom Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,6 +51,17 @@
         },
       }
     </script>
+
+    <!-- Fix for intl-tel-input full width -->
+    <style>
+        .iti {
+        width: 100%;
+        }
+        .iti input {
+        width: 100%;
+        padding-left: 3rem !important;
+        }
+    </style>
 </head>
 <body class="fon-Inter">
     <!-- Header -->
@@ -231,47 +259,61 @@
         <p class="text-gray lg:mb-8 mb-6 lg:text-xl md:text-sm text-xs">Our friendly team would love to hear from you.</p>
 
         <!-- Form -->
-        <form id="contactForm" class="space-y-4">
-        <!-- First & Last Name -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 space-y-4 md:space-y-0">
-            <div>
-            <label for="firstName" class="block text-sm font-medium text-[#344054] mb-2">First name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="First name"
-                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
+        <form class="contact-form space-y-4">
+            <!-- First & Last Name -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 space-y-4 lg:space-y-0">
+                <!-- FirstName -->
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-[#344054] mb-2">First name</label>
+                    <input type="text" name="firstName" placeholder="First name"
+                    class="firstName focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                    <!-- Error message -->
+                    <span class="firstName-error text-red-500 text-xs mt-1 block"></span>
+                </div>
+                <!-- LastName -->
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-[#344054] mb-2">Last name</label>
+                    <input type="text" name="lastName" placeholder="Last name"
+                    class="lastName focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                    <!-- Error message -->
+                    <span class="lastName-error text-red-500 text-xs mt-1 block"></span>
+                </div>
             </div>
-            <div>
-            <label for="lastName" class="block text-sm font-medium text-[#344054] mb-2">Last name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Last name"
-                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
-            </div>
-        </div>
 
-        <!-- Email -->
-        <div>
+            <!-- Email -->
+            <div>
             <label for="email" class="block text-sm font-medium text-[#344054] mb-2">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com"
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
-        </div>
+            <input type="email" name="email" placeholder="you@company.com"
+                class="email focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                <!-- Error message -->
+                <span class="email-error text-red-500 text-xs mt-1 block"></span>
+            </div>
 
-        <!-- Phone -->
-        <div>
+            <!-- Phone -->
+            <div>
             <label for="phone" class="block text-sm font-medium text-[#344054] mb-2">Phone number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000"
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
-        </div>
+            <div class="relative w-full">
+            <input type="tel" name="phone" placeholder="+1 (555) 000-0000"
+                class="phone focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-12 py-3"/>
+            </div>
+            <!-- Error message -->
+            <span class="phone-error text-red-500 text-xs mt-1 block"></span>
+            </div>
 
-        <!-- Message -->
-        <div>
+            <!-- Message -->
+            <div>
             <label for="message" class="block text-sm font-medium text-[#344054] mb-2">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Write your message..."
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none"></textarea>
-        </div>
+            <textarea name="message" rows="4" placeholder="Write your message..."
+                class="message focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3"></textarea>
+                <!-- Error message -->
+                <span class="message-error text-red-500 text-xs mt-1 block"></span>
+            </div>
 
-        <!-- Button -->
-        <button type="submit" class="bg-green text-white lg:text-xl md:text-lg text-base font-medium rounded-full lg:py-3 py-2 w-full ring-8 ring-shadowGreen mt-8 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
+            <!-- Button -->
+            <button type="submit" class="bg-green text-white lg:text-xl md:text-lg text-base font-medium rounded-full lg:py-3 py-2 w-full ring-8 ring-shadowGreen mt-8 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
 ">
-            Send Message
-        </button>
+                Send Message
+            </button> 
         </form>
     </div>
     </div>
@@ -441,5 +483,7 @@
      <div id="footer"></div>
 
      <script src="./main.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.12/build/js/intlTelInput.min.js"></script>
+     <script src="./contact-us.js"></script>
 </body>
 </html>

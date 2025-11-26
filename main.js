@@ -1,9 +1,9 @@
-// 🌐 LOAD HEADER & FOOTER DYNAMICALLY
+// Load Header & Footer Dynamically
 document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header.html", "header");
   loadHTML("footer.html", "footer");
 
-  // ✅ Initialize mini text slider after DOM is ready
+  // Initialize mini text slider after DOM is ready
   initMiniTextSlider();
 });
 
@@ -13,16 +13,16 @@ function loadHTML(file, elementId) {
     .then(data => {
       document.getElementById(elementId).innerHTML = data;
 
-      // ✅ Initialize burger menu only after header is loaded
+      // Initialize burger menu only after header is loaded
       if (elementId === "header") {
         initBurgerMenu();
-        highlightActiveNavLink(); // ✅ highlight current page link
+        highlightActiveNavLink(); // highlight current page link
       }
     })
     .catch(error => console.error("Error loading file:", error));
 }
 
-// 🍔 BURGER MENU FUNCTION (separate mobile nav)
+// Burger Menu Function
 function initBurgerMenu() {
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -56,7 +56,7 @@ function initBurgerMenu() {
     }
   });
 
-  // Optional: close menu when clicking outside (nice UX)
+  // close menu when clicking outside
   document.addEventListener("click", (e) => {
     const target = e.target;
     if (!menuToggle.contains(target) && !mobileMenu.contains(target) && !mobileMenu.classList.contains("hidden")) {
@@ -73,7 +73,7 @@ function initBurgerMenu() {
   });
 }
 
-// 🌿 AUTO-HIGHLIGHT ACTIVE NAV LINK
+// Auto-Highlight Active Nav Link
 function highlightActiveNavLink() {
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
@@ -86,7 +86,7 @@ function highlightActiveNavLink() {
   });
 }
 
-// 🎞️ UNIVERSAL SLIDER LOGIC (Works for all sliders)
+// Slider Logic
 document.querySelectorAll(".slider").forEach(slider => {
   const slides = slider.querySelectorAll(".slide");
   const prevBtn = slider.querySelector(".prev");
@@ -154,7 +154,7 @@ document.querySelectorAll(".slider").forEach(slider => {
   updateSlide();
 });
 
-// 🩺 MINI TEXT SLIDER (Assisted Living, Health Care, Community Engagement)
+// Mini text slider(Assisted Living, Health Care, Community Engagement)
 function initMiniTextSlider() {
   const slides = [
     {
@@ -208,7 +208,7 @@ function initMiniTextSlider() {
   updateSlide();
 }
 
-// 📩 TRAINING PAGE MODAL FUNCTIONALITY
+// Training page modal
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("contact-modal");
   const closeModal = document.getElementById("close-modal");
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Open modal on any "Send Message" button click
   messageButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault(); // ✅ Prevent form submission or link navigation
+      e.preventDefault(); // Prevent form submission or link navigation
       modal.classList.remove("hidden");
       modal.classList.add("flex"); // Ensure it's visible and properly displayed
     });

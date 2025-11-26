@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumem-Christi</title>
 
-    <link rel="icon" type="image/png" sizes="96x96" href=/images/lc-favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/lc-favicon.png">
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.12/build/css/intlTelInput.min.css" />
 
@@ -73,54 +73,55 @@
             <h2 class="lg:text-4xl text-3xl text-veryDarkBlue xl:mb-5 lg:mb-3 mb-2 font-RachelBrown">Get in touch</h2>
             <p class="text-gray xl:mb-12 lg:mb-8 md:mb-6 mb-10 lg:text-xl text-sm">Our friendly team would love to hear from you.</p>
 
-            <form id="contact-form" class="space-y-6">
+            <form class="contact-form space-y-6">
                 <!-- First & Last Name -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 space-y-6 lg:space-y-0">
                     <!-- FirstName -->
                     <div>
                         <label for="firstName" class="block text-sm font-medium text-[#344054] mb-2">First name</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="First name"
-                        class="focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                        <input type="text" name="firstName" placeholder="First name"
+                        class="firstName focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
                         <!-- Error message -->
-                        <span class="text-red-500 text-xs mt-1 block" id="firstName-error"></span>
+                        <span class="firstName-error text-red-500 text-xs mt-1 block"></span>
                     </div>
                     <!-- LastName -->
                     <div>
                         <label for="lastName" class="block text-sm font-medium text-[#344054] mb-2">Last name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Last name"
-                        class="focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                        <input type="text" name="lastName" placeholder="Last name"
+                        class="lastName focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
                         <!-- Error message -->
-                        <span class="text-red-500 text-xs mt-1 block" id="lastName-error"></span>
+                        <span class="lastName-error text-red-500 text-xs mt-1 block"></span>
                     </div>
                 </div>
 
                 <!-- Email -->
                 <div>
                 <label for="email" class="block text-sm font-medium text-[#344054] mb-2">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@company.com"
-                    class="focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                <input type="email" name="email" placeholder="you@company.com"
+                    class="email focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
                     <!-- Error message -->
-                    <span class="text-red-500 text-xs mt-1 block" id="email-error"></span>
+                    <span class="email-error text-red-500 text-xs mt-1 block"></span>
                 </div>
 
                 <!-- Phone -->
                 <div>
                 <label for="phone" class="block text-sm font-medium text-[#344054] mb-2">Phone number</label>
                 <div class="relative w-full">
-                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000"
-                    class="focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-12 py-3"/>
+                <input type="tel" name="phone" placeholder="+1 (555) 000-0000"
+                    class="phone focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-12 py-3"/>
                 </div>
                 <!-- Error message -->
-                <span class="text-red-500 text-xs mt-1 block" id="phone-error"></span>
+                <span class="phone-error text-red-500 text-xs mt-1 block"></span>
                 </div>
 
                 <!-- Message -->
                 <div>
                 <label for="message" class="block text-sm font-medium text-[#344054] mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Write your message..."
-                    class="focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3"></textarea>
+                <textarea name="message" rows="4" placeholder="Write your message..."
+                    class="message focus:border-green focus:ring-green focus:outline-none rounded-md mt-1 block w-full border border-[#D0D5DD] px-4 py-3">
+                </textarea>
                     <!-- Error message -->
-                    <span class="text-red-500 text-xs mt-1 block" id="message-error"></span>
+                    <span class="message-error text-red-500 text-xs mt-1 block"></span>
                 </div>
 
                 <!-- Button -->
