@@ -159,7 +159,7 @@ function initMiniTextSlider() {
   const slides = [
     {
       title: "Assisted Living",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      text: "Personalized care and support for independent living, with assistance in daily activities, medication management, and social engagement."
     },
     {
       title: "Health Care",

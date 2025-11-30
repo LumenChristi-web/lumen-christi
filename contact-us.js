@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (hasError) return;
 
-      // Final international number format
+      // International number format
       const phoneNumber = iti.getNumber();
 
       // Send to EmailJS
